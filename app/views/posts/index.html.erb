@@ -1,0 +1,14 @@
+<h1>Top page</h1>
+<%= link_to '新規投稿', '/posts/new' %>
+<%# インスタンス変数に代入したテーブル番号のカラムを.以降で選択している %>
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post-date">
+    <%# ブロック変数postを代入した値＝レコード番号 %>
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>

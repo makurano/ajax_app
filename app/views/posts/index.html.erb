@@ -1,8 +1,11 @@
 <h1>AjaxApp</h1>
 <%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
-  <%= form.text_field :content %>
+  <%= form.text_field :content  , id: "content"%>
   <%= form.submit '投稿する' , id: "submit" %>
 <% end %>
+
+<div id="list">
+</div>
 
 <%# インスタンス変数に代入したテーブル番号のカラムを.以降で選択している %>
 <% @posts.each do |post| %>

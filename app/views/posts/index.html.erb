@@ -6,7 +6,7 @@
 
 <%# インスタンス変数に代入したテーブル番号のカラムを.以降で選択している %>
 <% @posts.each do |post| %>
-  <div class="post">
+  <div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
     <div class="post-date">
     <%# ブロック変数postを代入した値＝レコード番号 %>
       投稿日時：<%= post.created_at %>
